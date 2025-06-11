@@ -144,68 +144,68 @@ const LandingPage = ({ setCurrentPage }) => {
 
   const getColorClasses = (color) => {
     const colors = {
-      primary: "from-[#13538A] to-[#1C1C1C]", // YinMin Blue to Eerie Black
-      accent: "from-[#F8CE4B] to-[#13538A]", // Sunglow to YinMin Blue
-      light: "from-[#F3F3F3] to-white" // White Smoke to White
+      primary: "from-blue-500 to-blue-600", // Bleus doux comme dans la maquette
+      accent: "from-cyan-400 to-blue-500", // Cyan vers bleu
+      light: "from-gray-50 to-white" // Gris très clair
     };
     return colors[color] || colors.primary;
   };
 
   const getBgColorClasses = (color) => {
     const colors = {
-      primary: "bg-[#13538A] text-white",
-      accent: "bg-[#F8CE4B] text-[#1C1C1C]",
-      light: "bg-[#F3F3F3] text-[#1C1C1C]"
+      primary: "bg-blue-600 text-white",
+      accent: "bg-cyan-500 text-white",
+      light: "bg-gray-50 text-gray-900"
     };
     return colors[color] || colors.primary;
   };
 
   const getTextColorClasses = (color) => {
     const colors = {
-      primary: "text-[#13538A]",
-      accent: "text-[#F8CE4B]",
-      dark: "text-[#1C1C1C]",
-      light: "text-[#F3F3F3]"
+      primary: "text-blue-600",
+      accent: "text-cyan-500",
+      dark: "text-gray-900",
+      light: "text-gray-600"
     };
     return colors[color] || colors.primary;
   };
 
   return (
     <div className="overflow-hidden">
-      {/* Hero Section - Enhanced with new color scheme */}
-      <section className="relative bg-gradient-to-br from-[#F3F3F3] via-white to-[#13538A]/10 py-20 lg:py-32 overflow-hidden">
-        {/* Background Elements */}
+      {/* Hero Section - Style maquette */}
+      <section className="relative bg-gradient-to-br from-gray-50 via-white to-blue-50 py-20 lg:py-32 overflow-hidden">
+        {/* Background Elements - Formes organiques comme dans la maquette */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#13538A]/20 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-[#F8CE4B]/30 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse delay-1000"></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-[#13538A]/15 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse delay-2000"></div>
+          <div className="absolute top-20 left-10 w-96 h-96 bg-blue-200/30 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-80 h-80 bg-cyan-200/40 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-pulse delay-1000"></div>
+          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-300/20 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse delay-2000"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center">
             {/* Badge */}
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#F8CE4B] to-[#F8CE4B]/80 rounded-full text-[#1C1C1C] text-sm font-bold mb-8 border border-[#F8CE4B]/30 shadow-lg">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-full text-blue-700 text-sm font-bold mb-8 border border-blue-200 shadow-lg">
               <Sparkles className="w-4 h-4 mr-2" />
               Plateforme #1 du freelancing responsable
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-[#1C1C1C] mb-8 leading-tight">
-              Connectez les 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#13538A] to-[#F8CE4B]"> projets éthiques</span>
-              <br />aux 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F8CE4B] to-[#13538A]"> freelances engagés</span>
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+              Rendre les collaborations 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500"> entre freelances</span>
+              <br />et entreprises 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600"> plus intuitives</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-[#1C1C1C]/80 mb-12 max-w-4xl mx-auto leading-relaxed">
-              LinkUp révolutionne le freelancing en connectant uniquement des <strong className="text-[#13538A]">freelances certifiés</strong> 
-              avec des <strong className="text-[#13538A]">entreprises responsables</strong>. Notre IA intelligente garantit des collaborations 
+            <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed">
+              LinkUp révolutionne le freelancing en connectant uniquement des <strong className="text-blue-600">freelances certifiés</strong> 
+              avec des <strong className="text-blue-600">entreprises responsables</strong>. Notre IA intelligente garantit des collaborations 
               alignées sur vos valeurs.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <button 
                 onClick={() => setCurrentPage('register')}
-                className="group bg-gradient-to-r from-[#13538A] to-[#1C1C1C] text-white px-10 py-5 rounded-2xl text-xl font-semibold hover:from-[#1C1C1C] hover:to-[#13538A] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center"
+                className="group bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-10 py-5 rounded-2xl text-xl font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center"
               >
                 <Building className="mr-3 w-6 h-6" />
                 Je recrute des talents
@@ -213,7 +213,7 @@ const LandingPage = ({ setCurrentPage }) => {
               </button>
               <button 
                 onClick={() => setCurrentPage('search')}
-                className="group border-3 border-[#13538A] text-[#13538A] px-10 py-5 rounded-2xl text-xl font-semibold hover:bg-[#13538A] hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                className="group border-2 border-blue-600 text-blue-600 px-10 py-5 rounded-2xl text-xl font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
               >
                 <Users className="mr-3 w-6 h-6" />
                 Je trouve des missions
@@ -222,17 +222,17 @@ const LandingPage = ({ setCurrentPage }) => {
             </div>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-8 text-[#1C1C1C]/60">
+            <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
               <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-[#F8CE4B] mr-2" />
+                <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
                 <span className="font-medium">100% gratuit</span>
               </div>
               <div className="flex items-center">
-                <Shield className="w-5 h-5 text-[#13538A] mr-2" />
+                <Shield className="w-5 h-5 text-blue-500 mr-2" />
                 <span className="font-medium">Certifications vérifiées</span>
               </div>
               <div className="flex items-center">
-                <Zap className="w-5 h-5 text-[#F8CE4B] mr-2" />
+                <Zap className="w-5 h-5 text-cyan-500 mr-2" />
                 <span className="font-medium">Matching IA</span>
               </div>
             </div>
@@ -241,7 +241,7 @@ const LandingPage = ({ setCurrentPage }) => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-6 h-6 text-[#1C1C1C]/40" />
+          <ChevronDown className="w-6 h-6 text-gray-400" />
         </div>
       </section>
 
@@ -250,12 +250,12 @@ const LandingPage = ({ setCurrentPage }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className={`text-center p-6 rounded-2xl bg-gradient-to-br ${getColorClasses(stat.color)} bg-opacity-5 border border-[#13538A]/10 hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
+              <div key={index} className={`text-center p-6 rounded-2xl bg-gradient-to-br ${getColorClasses(stat.color)} bg-opacity-5 border border-blue-100 hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
                 <div className={`w-16 h-16 ${getBgColorClasses(stat.color)} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg`}>
                   <stat.icon className="w-8 h-8" />
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-[#1C1C1C] mb-2">{stat.number}</div>
-                <div className="text-[#1C1C1C]/70 font-medium">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
+                <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -263,75 +263,75 @@ const LandingPage = ({ setCurrentPage }) => {
       </section>
 
       {/* Problem/Solution Section */}
-      <section className="py-20 bg-gradient-to-br from-[#F3F3F3] to-white" id="problem" data-animate>
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white" id="problem" data-animate>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#1C1C1C] mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                 Le freelancing traditionnel a un 
-                <span className="text-red-600"> problème</span>
+                <span className="text-red-500"> problème</span>
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                    <span className="text-red-600 font-bold">✗</span>
+                    <span className="text-red-500 font-bold">✗</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#1C1C1C] mb-2">Projets sans éthique</h3>
-                    <p className="text-[#1C1C1C]/70">Impossible de filtrer les entreprises polluantes ou non-responsables</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">Projets sans éthique</h3>
+                    <p className="text-gray-600">Impossible de filtrer les entreprises polluantes ou non-responsables</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                    <span className="text-red-600 font-bold">✗</span>
+                    <span className="text-red-500 font-bold">✗</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#1C1C1C] mb-2">Matching approximatif</h3>
-                    <p className="text-[#1C1C1C]/70">Algorithmes basés uniquement sur les compétences, pas sur les valeurs</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">Matching approximatif</h3>
+                    <p className="text-gray-600">Algorithmes basés uniquement sur les compétences, pas sur les valeurs</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                    <span className="text-red-600 font-bold">✗</span>
+                    <span className="text-red-500 font-bold">✗</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#1C1C1C] mb-2">Pas de transparence</h3>
-                    <p className="text-[#1C1C1C]/70">Aucune vérification des engagements RSE des entreprises</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">Pas de transparence</h3>
+                    <p className="text-gray-600">Aucune vérification des engagements RSE des entreprises</p>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#1C1C1C] mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                 LinkUp apporte la 
-                <span className="text-[#F8CE4B]"> solution</span>
+                <span className="text-blue-600"> solution</span>
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-[#F8CE4B]/20 rounded-full flex items-center justify-center mr-4 mt-1">
-                    <CheckCircle className="w-5 h-5 text-[#F8CE4B]" />
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <CheckCircle className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#1C1C1C] mb-2">100% entreprises certifiées</h3>
-                    <p className="text-[#1C1C1C]/70">Uniquement des entreprises B-Corp, labellisées ou certifiées RSE</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">100% entreprises certifiées</h3>
+                    <p className="text-gray-600">Uniquement des entreprises B-Corp, labellisées ou certifiées RSE</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-[#F8CE4B]/20 rounded-full flex items-center justify-center mr-4 mt-1">
-                    <CheckCircle className="w-5 h-5 text-[#F8CE4B]" />
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <CheckCircle className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#1C1C1C] mb-2">IA éthique avancée</h3>
-                    <p className="text-[#1C1C1C]/70">Matching basé sur les compétences ET les valeurs partagées</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">IA éthique avancée</h3>
+                    <p className="text-gray-600">Matching basé sur les compétences ET les valeurs partagées</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-[#F8CE4B]/20 rounded-full flex items-center justify-center mr-4 mt-1">
-                    <CheckCircle className="w-5 h-5 text-[#F8CE4B]" />
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <CheckCircle className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#1C1C1C] mb-2">Impact mesurable</h3>
-                    <p className="text-[#1C1C1C]/70">Suivi transparent de l'impact environnemental et social</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">Impact mesurable</h3>
+                    <p className="text-gray-600">Suivi transparent de l'impact environnemental et social</p>
                   </div>
                 </div>
               </div>
@@ -344,22 +344,22 @@ const LandingPage = ({ setCurrentPage }) => {
       <section className="py-20 bg-white" id="features" data-animate>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1C1C1C] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Une plateforme pensée pour l'impact
             </h2>
-            <p className="text-xl text-[#1C1C1C]/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Découvrez les fonctionnalités qui font de LinkUp la référence du freelancing responsable
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="group p-8 rounded-2xl bg-gradient-to-br from-white to-[#F3F3F3] border border-[#13538A]/10 hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+              <div key={index} className="group p-8 rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
                 <div className={`w-16 h-16 ${getBgColorClasses(feature.color)} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                   <feature.icon className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#1C1C1C] mb-4">{feature.title}</h3>
-                <p className="text-[#1C1C1C]/70 leading-relaxed text-lg">{feature.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-lg">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -367,18 +367,18 @@ const LandingPage = ({ setCurrentPage }) => {
       </section>
 
       {/* How it works */}
-      <section className="py-20 bg-gradient-to-br from-[#13538A]/5 to-[#F8CE4B]/5" id="how-it-works" data-animate>
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50" id="how-it-works" data-animate>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1C1C1C] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Comment ça marche ?
             </h2>
-            <p className="text-xl text-[#1C1C1C]/70">Un processus simple en 3 étapes</p>
+            <p className="text-xl text-gray-600">Un processus simple en 3 étapes</p>
           </div>
 
           <div className="relative">
             {/* Connection lines */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#13538A]/20 via-[#F8CE4B]/20 to-[#13538A]/20 transform -translate-y-1/2"></div>
+            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-200 via-cyan-200 to-blue-200 transform -translate-y-1/2"></div>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {steps.map((step, index) => (
@@ -386,11 +386,11 @@ const LandingPage = ({ setCurrentPage }) => {
                   <div className={`w-24 h-24 bg-gradient-to-r ${getColorClasses(step.color)} rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl group-hover:scale-110 transition-transform duration-300 relative z-10`}>
                     <step.icon className="w-12 h-12 text-white" />
                   </div>
-                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-[#F3F3F3] z-0">
+                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-gray-100 z-0">
                     {step.number}
                   </div>
-                  <h3 className="text-2xl font-bold text-[#1C1C1C] mb-4">{step.title}</h3>
-                  <p className="text-[#1C1C1C]/70 leading-relaxed text-lg">{step.description}</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{step.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-lg">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -402,19 +402,19 @@ const LandingPage = ({ setCurrentPage }) => {
       <section className="py-20 bg-white" id="certifications" data-animate>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1C1C1C] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Certifications reconnues
             </h2>
-            <p className="text-xl text-[#1C1C1C]/70">
+            <p className="text-xl text-gray-600">
               Nos membres sont certifiés par les organismes les plus exigeants
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {certifications.map((cert, index) => (
-              <div key={index} className={`text-center p-6 rounded-2xl bg-gradient-to-br ${getColorClasses(cert.color)} bg-opacity-5 border border-[#13538A]/10 hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
-                <div className="text-3xl font-bold text-[#1C1C1C] mb-2">{cert.count}</div>
-                <div className="text-[#1C1C1C]/70 font-medium">{cert.name}</div>
+              <div key={index} className={`text-center p-6 rounded-2xl bg-gradient-to-br ${getColorClasses(cert.color)} bg-opacity-5 border border-blue-100 hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
+                <div className="text-3xl font-bold text-gray-900 mb-2">{cert.count}</div>
+                <div className="text-gray-600 font-medium">{cert.name}</div>
               </div>
             ))}
           </div>
@@ -422,26 +422,26 @@ const LandingPage = ({ setCurrentPage }) => {
       </section>
 
       {/* Testimonials Carousel */}
-      <section className="py-20 bg-gradient-to-br from-[#F3F3F3] to-white" id="testimonials" data-animate>
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white" id="testimonials" data-animate>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1C1C1C] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Ils transforment leur carrière
             </h2>
-            <p className="text-xl text-[#1C1C1C]/70">
+            <p className="text-xl text-gray-600">
               Découvrez les success stories de notre communauté
             </p>
           </div>
 
           <div className="relative max-w-4xl mx-auto">
-            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-[#13538A]/10">
+            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100">
               <div className="flex items-center mb-8">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-[#F8CE4B] fill-current mr-1" />
+                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current mr-1" />
                 ))}
               </div>
               
-              <blockquote className="text-2xl md:text-3xl text-[#1C1C1C] leading-relaxed mb-8 italic">
+              <blockquote className="text-2xl md:text-3xl text-gray-900 leading-relaxed mb-8 italic">
                 "{testimonials[currentTestimonial].content}"
               </blockquote>
               
@@ -451,14 +451,14 @@ const LandingPage = ({ setCurrentPage }) => {
                     {testimonials[currentTestimonial].avatar}
                   </div>
                   <div>
-                    <div className="font-bold text-[#1C1C1C] text-lg">{testimonials[currentTestimonial].name}</div>
-                    <div className="text-[#1C1C1C]/70">{testimonials[currentTestimonial].role}</div>
-                    <div className="text-sm text-[#1C1C1C]/50">{testimonials[currentTestimonial].company}</div>
+                    <div className="font-bold text-gray-900 text-lg">{testimonials[currentTestimonial].name}</div>
+                    <div className="text-gray-600">{testimonials[currentTestimonial].role}</div>
+                    <div className="text-sm text-gray-500">{testimonials[currentTestimonial].company}</div>
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-sm text-[#1C1C1C]/50 mb-1">Dernier projet</div>
-                  <div className="font-medium text-[#1C1C1C]/70">{testimonials[currentTestimonial].project}</div>
+                  <div className="text-sm text-gray-500 mb-1">Dernier projet</div>
+                  <div className="font-medium text-gray-600">{testimonials[currentTestimonial].project}</div>
                 </div>
               </div>
             </div>
@@ -470,7 +470,7 @@ const LandingPage = ({ setCurrentPage }) => {
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                    index === currentTestimonial ? 'bg-[#13538A] w-8' : 'bg-[#1C1C1C]/20'
+                    index === currentTestimonial ? 'bg-blue-600 w-8' : 'bg-gray-300'
                   }`}
                 />
               ))}
@@ -483,15 +483,15 @@ const LandingPage = ({ setCurrentPage }) => {
       <section className="py-20 bg-white" id="social-proof" data-animate>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1C1C1C] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Ils nous font confiance
             </h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-40">
             {[...Array(12)].map((_, index) => (
-              <div key={index} className="h-16 bg-[#F3F3F3] rounded-lg flex items-center justify-center border border-[#13538A]/10">
-                <span className="text-[#1C1C1C]/40 font-semibold">Logo {index + 1}</span>
+              <div key={index} className="h-16 bg-gray-100 rounded-lg flex items-center justify-center border border-gray-200">
+                <span className="text-gray-400 font-semibold">Logo {index + 1}</span>
               </div>
             ))}
           </div>
@@ -499,82 +499,82 @@ const LandingPage = ({ setCurrentPage }) => {
       </section>
 
       {/* Pricing/Value Proposition */}
-      <section className="py-20 bg-gradient-to-br from-[#13538A]/5 to-[#F8CE4B]/5" id="pricing" data-animate>
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50" id="pricing" data-animate>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1C1C1C] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Gratuit pour commencer
             </h2>
-            <p className="text-xl text-[#1C1C1C]/70">
+            <p className="text-xl text-gray-600">
               Créez votre compte et commencez à collaborer dès aujourd'hui
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-3xl shadow-lg border border-[#13538A]/10">
+            <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-[#1C1C1C] mb-4">Freelances</h3>
-                <div className="text-5xl font-bold text-[#13538A] mb-2">0€</div>
-                <div className="text-[#1C1C1C]/70">Toujours gratuit</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Freelances</h3>
+                <div className="text-5xl font-bold text-blue-600 mb-2">0€</div>
+                <div className="text-gray-600">Toujours gratuit</div>
               </div>
               <ul className="space-y-4">
                 <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-[#F8CE4B] mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
                   <span>Profil illimité</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-[#F8CE4B] mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
                   <span>Matching IA</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-[#F8CE4B] mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
                   <span>Messagerie intégrée</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-[#F8CE4B] mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
                   <span>Paiements sécurisés</span>
                 </li>
               </ul>
               <button 
                 onClick={() => setCurrentPage('register')}
-                className="w-full mt-8 bg-[#13538A] text-white py-4 rounded-xl font-semibold hover:bg-[#1C1C1C] transition-colors duration-200"
+                className="w-full mt-8 bg-blue-600 text-white py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors duration-200"
               >
                 Créer mon profil freelance
               </button>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl shadow-lg border border-[#F8CE4B]/30 relative">
+            <div className="bg-white p-8 rounded-3xl shadow-lg border border-cyan-200 relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-gradient-to-r from-[#F8CE4B] to-[#13538A] text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                   Populaire
                 </span>
               </div>
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-[#1C1C1C] mb-4">Entreprises</h3>
-                <div className="text-5xl font-bold text-[#F8CE4B] mb-2">5%</div>
-                <div className="text-[#1C1C1C]/70">Commission sur projets réussis</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Entreprises</h3>
+                <div className="text-5xl font-bold text-cyan-500 mb-2">5%</div>
+                <div className="text-gray-600">Commission sur projets réussis</div>
               </div>
               <ul className="space-y-4">
                 <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-[#13538A] mr-3" />
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3" />
                   <span>Projets illimités</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-[#13538A] mr-3" />
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3" />
                   <span>Matching IA premium</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-[#13538A] mr-3" />
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3" />
                   <span>Support prioritaire</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-[#13538A] mr-3" />
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3" />
                   <span>Analytics avancés</span>
                 </li>
               </ul>
               <button 
                 onClick={() => setCurrentPage('register')}
-                className="w-full mt-8 bg-gradient-to-r from-[#F8CE4B] to-[#13538A] text-white py-4 rounded-xl font-semibold hover:from-[#13538A] hover:to-[#1C1C1C] transition-all duration-200"
+                className="w-full mt-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
                 Publier mon premier projet
               </button>
@@ -587,7 +587,7 @@ const LandingPage = ({ setCurrentPage }) => {
       <section className="py-20 bg-white" id="faq" data-animate>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1C1C1C] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Questions fréquentes
             </h2>
           </div>
@@ -611,9 +611,9 @@ const LandingPage = ({ setCurrentPage }) => {
                 a: "Gratuit pour les freelances. Les entreprises paient 5% de commission uniquement sur les projets aboutis, garantissant un service de qualité."
               }
             ].map((faq, index) => (
-              <div key={index} className="bg-[#F3F3F3] rounded-2xl p-6 hover:bg-[#13538A]/5 transition-colors duration-200 border border-[#13538A]/10">
-                <h3 className="text-xl font-semibold text-[#1C1C1C] mb-3">{faq.q}</h3>
-                <p className="text-[#1C1C1C]/70 leading-relaxed">{faq.a}</p>
+              <div key={index} className="bg-gray-50 rounded-2xl p-6 hover:bg-blue-50 transition-colors duration-200 border border-gray-100">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.q}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -621,21 +621,21 @@ const LandingPage = ({ setCurrentPage }) => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-[#13538A] via-[#1C1C1C] to-[#13538A] relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F8CE4B]/10 to-transparent"></div>
+      <section className="py-20 bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent"></div>
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Prêt à révolutionner votre façon de travailler ?
           </h2>
-          <p className="text-xl md:text-2xl text-[#F3F3F3] mb-12 leading-relaxed">
-            Rejoignez <strong className="text-[#F8CE4B]">2,847 freelances</strong> et <strong className="text-[#F8CE4B]">1,156 entreprises</strong> qui construisent 
+          <p className="text-xl md:text-2xl text-blue-100 mb-12 leading-relaxed">
+            Rejoignez <strong className="text-white">2,847 freelances</strong> et <strong className="text-white">1,156 entreprises</strong> qui construisent 
             un avenir plus responsable. Votre prochaine collaboration vous attend.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <button 
               onClick={() => setCurrentPage('register')}
-              className="group bg-[#F8CE4B] text-[#1C1C1C] px-10 py-5 rounded-2xl text-xl font-bold hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center"
+              className="group bg-white text-blue-600 px-10 py-5 rounded-2xl text-xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center"
             >
               <Rocket className="mr-3 w-6 h-6" />
               Commencer gratuitement
@@ -643,24 +643,24 @@ const LandingPage = ({ setCurrentPage }) => {
             </button>
             <button 
               onClick={() => setCurrentPage('search')}
-              className="group border-2 border-[#F8CE4B] text-[#F8CE4B] px-10 py-5 rounded-2xl text-xl font-bold hover:bg-[#F8CE4B] hover:text-[#1C1C1C] transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+              className="group border-2 border-white text-white px-10 py-5 rounded-2xl text-xl font-bold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
               <Eye className="mr-3 w-6 h-6" />
               Découvrir les talents
             </button>
           </div>
 
-          <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-[#F3F3F3]">
+          <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-blue-100">
             <div className="flex items-center">
-              <CheckCircle className="w-5 h-5 mr-2 text-[#F8CE4B]" />
+              <CheckCircle className="w-5 h-5 mr-2 text-white" />
               <span>Inscription en 2 minutes</span>
             </div>
             <div className="flex items-center">
-              <Shield className="w-5 h-5 mr-2 text-[#F8CE4B]" />
+              <Shield className="w-5 h-5 mr-2 text-white" />
               <span>100% sécurisé</span>
             </div>
             <div className="flex items-center">
-              <Heart className="w-5 h-5 mr-2 text-[#F8CE4B]" />
+              <Heart className="w-5 h-5 mr-2 text-white" />
               <span>Support humain</span>
             </div>
           </div>
