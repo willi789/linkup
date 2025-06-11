@@ -4,35 +4,51 @@ import { Users, Target, Heart, Shield, Globe, Zap, Award, TrendingUp, Lightbulb,
 const AboutPage = () => {
   const teamMembers = [
     {
-      name: "Jean Dupont",
-      role: "CEO & Fondateur",
-      initials: "JD",
+      name: "Antonin Haviotte",
+      role: "Dirigeant / Chef de projet",
+      initials: "AH",
       color: "blue",
-      description: "Ex-consultant McKinsey, passionné par l'impact social et environnemental.",
+      description: "Visionnaire et leader du projet LinkUp, passionné par l'innovation responsable et l'impact social.",
       linkedin: "#"
     },
     {
-      name: "Sophie Martin",
-      role: "CTO",
-      initials: "SM",
+      name: "Alice Da Costa",
+      role: "Dir. communication & événementielle",
+      initials: "AD",
       color: "cyan",
-      description: "Ancienne Lead Dev chez Stripe, experte en IA et développement durable.",
+      description: "Experte en communication responsable et organisation d'événements à impact positif.",
       linkedin: "#"
     },
     {
-      name: "Pierre Leroy",
-      role: "Head of Product",
-      initials: "PL",
+      name: "William Ulses",
+      role: "Dir. Tech",
+      initials: "WU",
       color: "blue",
-      description: "Designer UX/UI senior, spécialisé dans les produits à impact positif.",
+      description: "Architecte technique et développeur passionné par les technologies durables et l'innovation.",
       linkedin: "#"
     },
     {
-      name: "Marie Dubois",
-      role: "Head of Growth",
-      initials: "MD",
+      name: "Lisa Kempeners",
+      role: "Dir. Artistique",
+      initials: "LK",
       color: "cyan",
-      description: "Experte en marketing responsable et croissance durable.",
+      description: "Créatrice visuelle spécialisée dans le design éthique et l'identité de marque responsable.",
+      linkedin: "#"
+    },
+    {
+      name: "Carla Patriat-JOOSTEN",
+      role: "Dir. stratégique marketing digital",
+      initials: "CP",
+      color: "blue",
+      description: "Stratège marketing digital experte en croissance responsable et communication éthique.",
+      linkedin: "#"
+    },
+    {
+      name: "Thibaud Gattegno",
+      role: "Dir. Artistique",
+      initials: "TG",
+      color: "cyan",
+      description: "Directeur artistique créatif, spécialisé dans l'expérience utilisateur et le design durable.",
       linkedin: "#"
     }
   ];
