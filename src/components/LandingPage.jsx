@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  ArrowRight, Users, Target, Shield, Heart, Star, CheckCircle, 
-  Zap, Globe, Award, TrendingUp, Clock, DollarSign, 
-  Sparkles, Leaf, Handshake, Eye, Play, ChevronDown,
-  BarChart3, MessageSquare, Calendar, MapPin, Filter,
-  Lightbulb, Rocket, Building, UserCheck, ArrowUpRight
-} from 'lucide-react';
+import { ArrowRight, Users, Target, Shield, Heart, Star, CheckCircle, Zap, Globe, Award, TrendingUp, Clock, DollarSign, Sparkles, Leaf, HeartHandshake as Handshake, Eye, Play, ChevronDown, BarChart3, MessageSquare, Calendar, MapPin, Filter, Lightbulb, Rocket, Building, UserCheck, ArrowUpRight } from 'lucide-react';
 
 const LandingPage = ({ setCurrentPage }) => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
